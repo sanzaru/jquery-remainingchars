@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #remchars {
+      font-size: .8em;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="remainingChars.js"></script>
+</head>
+<body>
+  <div id="textbox">
+    <textarea id="textarea" cols="20" rows="10"></textarea>
+  </div>
+  <span id="remchars"></span>
+  <script>
+    $(function(){
+      var rem = new remainingChars({
+        maxChars: 256,
+        textarea: '#textarea',
+        statusarea: '#remchars',
+        statustext: 'Verbleibend: %d'
+      });
+    });    
+  </script>
+</body>
+</html>
