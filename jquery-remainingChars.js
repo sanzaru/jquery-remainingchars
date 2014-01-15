@@ -46,7 +46,6 @@ $.fn.remainingChars = function(opts) {
 
         el.after('<div class="remcharsCount">' + text + '</div>');
         el.on('change keyup', function() {
-            console.log(methods.getRemaining(this));
             methods.showRemaining(this);
         });
     }
