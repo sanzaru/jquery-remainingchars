@@ -11,17 +11,14 @@
 </head>
 <body>
   <div id="textbox">
-    <textarea id="textarea" cols="20" rows="10"></textarea>
+    <textarea id="textarea" class="remchars" data-maxlen="256" cols="20" rows="10"></textarea>
+    <br/>
+    <input class="remchars" data-maxlen="12" />
   </div>
-  <span id="remchars"></span>
   <script>
     $(function(){
-      var rem = new remainingChars({
-        maxChars: 256,
-        textarea: '#textarea',
-        statusarea: '#remchars',
-        statustext: 'Verbleibend: %d'
-      });
+      var rem = new remainingChars({statustext: 'Verbleibend: %d'});
+      rem.load();
     });    
   </script>
 </body>
