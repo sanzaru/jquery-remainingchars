@@ -6,7 +6,6 @@
       font-size: .8em;
     }
   </style>
-  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="remainingChars.js"></script>
 </head>
 <body>
@@ -16,10 +15,10 @@
     <input class="remchars" data-maxlen="12" />
   </div>
   <script>
-    $(function(){
+    (function(){
       var rem = new remainingChars({statustext: 'Verbleibend: %d'});
       rem.load();
-    });    
+    })();    
   </script>
 </body>
 </html>
