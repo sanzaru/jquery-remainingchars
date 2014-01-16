@@ -1,4 +1,4 @@
-jquery-remainingChars
+jquery-remainingchars
 =====================
 
 jQuery plugin to add remaining characters text to textbox and input elements. 
