@@ -10,7 +10,6 @@
  *                          (e.g. "Remaining: %d").
  *    
  * @author Martin Albrecht <martin.albrecht@javacoffee.de> 
- * @version 0.1.1
  * @param {object} opts Option array
  * @return {undefined}
  */
