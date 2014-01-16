@@ -11,7 +11,9 @@ Build project:
 
 Usage:
 ------
-The easiest way to use the plugin would be like:
+If you just want to use the plugin simply download the minified version and include it in your HTML.
+
+The easiest way of usage would be like:
 
 ```html
 <input type="text" class=".remchars" />
@@ -25,6 +27,7 @@ With options it would be:
 
 ```html
 <input type="text" class=".remchars" />
+<script src="path_to_your_javascripts/jquery-remainingchars.min.js"></script>
 <script>
     $('.remchars').remainingChars({
         statustext: 'My remaining chars: %d'
@@ -33,6 +36,9 @@ With options it would be:
 ```
 
 See the example.html in demo folder for a full example.
+
+The plugin will add a div container after the inputs/textareas with the class name "remcharsCount", so if you want to
+style the output declare some rules for this class in your CSS.
 
 
 Valid option parameters:
