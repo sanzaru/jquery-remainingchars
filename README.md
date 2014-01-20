@@ -67,8 +67,7 @@ Valid option parameters:
 * statustext: The text to show in the status area {optional} If no text is passed the default message is taken.  
 **IMPORTANT:** The statustext string must include a *%d* for being replaced with the count of remaining characters (e.g. "Remaining: %d").
 
-* limitinput: If set to true, the input field will take only as much characters as in data-maxlen defined (e.g. data-maxlen="120" will result  
-in 120 possible characters).  
+* limitinput: If set to true, the input field will take only as much characters as in data-maxlen defined (e.g. data-maxlen="120" will result in 120 possible characters).  
 **NOTE:** This attribute can also be set via data-limitinput="true" HTML attribute, so set it individually for an element.
 
 Changelog:
