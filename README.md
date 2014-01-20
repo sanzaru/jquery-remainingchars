@@ -69,7 +69,7 @@ Valid option parameters:
 
 Changelog:
 ----------
-* Version 0.2.1: *
-* Added new option paramter limitinput
-* Added error class to status area when remaining character count gets less then 0
+* **Version 0.2.1:**
+	* Added new option paramter limitinput
+	* Added error class to status area when remaining character count gets less then 0
 
