@@ -2,14 +2,24 @@
 <html>
     <head>
         <title>jquery-remainingchars Demo</title>
+        <style>
+            .error {
+                color: #f00;
+            }
+        </style>
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="../jquery-remainingchars.min.js"></script>
     </head>
     <body>
         <div id="textbox">
+            <strong>Textarea example:</strong><br/>
             <textarea id="textarea" class="remchars" data-maxlen="100" cols="20" rows="10"></textarea>
             <br/>
+            <strong>Input example:</strong><br/>
             <input class="remchars" data-maxlen="12" />
+            <br/>
+            <strong>Input with limited characters to enter:</strong><br/>
+            <input class="remchars" data-maxlen="12" data-limitinput="true" />
         </div>
         <script>
             (function() {

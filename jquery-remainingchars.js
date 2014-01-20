@@ -8,6 +8,12 @@
  *               IMPORTANT: The statustext string must include a %d for being
  *                          replaced with the count of remaining characters
  *                          (e.g. "Remaining: %d").
+ *   
+ *   limitinput: If set to true, the input field will take only as much characters
+ *               as in data-maxlen defined (e.g. data-maxlen="120" will result in
+ *               120 possible characters).
+ *               NOTE: This attribute can also be set via data-limitinput="true" 
+                       HTML attribute, so set it individually for an element.
  *    
  * @author Martin Albrecht <martin.albrecht@javacoffee.de> 
  * @param {object} opts Option array
@@ -15,6 +21,7 @@
  */
 $.fn.remainingChars = function(opts) {
     var statustext = 'Remaining: %d',
+        limitinput = false,
         methods = {
             // Get remaining characters
             getRemaining: function(el) {
@@ -28,9 +35,17 @@ $.fn.remainingChars = function(opts) {
             },
             // Show remaining characters message
             showRemaining: function(el) {
-                var remaining = methods.getRemaining(el);
-                var newVal = methods.getStatusText(remaining);
+                var remaining = parseInt(methods.getRemaining(el));
+                var newVal = methods.getStatusText(remaining);                
+
+                if( remaining < 0 ) {
+                    $(el).next().addClass('error');
+                }
+
                 $(el).next().html(newVal);
+            },
+            limitInput: function(el) {
+                $(el).attr('maxlength', $(el).data('maxlen'));
             }
         };
 
@@ -39,9 +54,17 @@ $.fn.remainingChars = function(opts) {
         statustext = opts.statustext;
     }
 
+    if( opts && typeof(opts.limitinput) !== 'undefined' && opts.limitinput === true ) {        
+        limitinput = true;
+    }
+
     for(var i=0, len=this.length; i<len; i++) {
         var el = $(this[i]);
         var text = methods.getStatusText(methods['getRemaining'].apply(el));
+
+        if( limitinput === true || $(el).data('limitinput') === true ) {
+            methods.limitInput(el);
+        }
 
         el.after('<div class="remcharsCount">' + text + '</div>');
         el.on('change keyup', function() {
