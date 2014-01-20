@@ -16,7 +16,7 @@ If you just want to use the plugin simply download the minified version and incl
 The easiest way of usage would be like:
 
 ```html
-<input type="text" class=".remchars" />
+<input type="text" class="remchars" />
 <script src="path_to_your_javascripts/jquery-remainingchars.min.js"></script>
 <script>
     $('.remchars').remainingChars();
@@ -26,7 +26,7 @@ The easiest way of usage would be like:
 With options it would be:
 
 ```html
-<input type="text" class=".remchars" />
+<input type="text" class="remchars" />
 <script src="path_to_your_javascripts/jquery-remainingchars.min.js"></script>
 <script>
     $('.remchars').remainingChars({
