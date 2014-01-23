@@ -39,10 +39,10 @@ $.fn.remainingChars = function(opts) {
                 var newVal = methods.getStatusText(remaining);                
 
                 if( remaining < 0 ) {
-                    $(el).next().addClass('error');
+                    $(el).nextAll('.remcharsCount:first').addClass('error');
                 }
 
-                $(el).next().html(newVal);
+                $(el).nextAll('.remcharsCount:first').html(newVal);
             },
             limitInput: function(el) {
                 $(el).attr('maxlength', $(el).data('maxlen'));
