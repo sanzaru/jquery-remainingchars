@@ -36,13 +36,18 @@ $.fn.remainingChars = function(opts) {
             // Show remaining characters message
             showRemaining: function(el) {
                 var remaining = parseInt(methods.getRemaining(el));
-                var newVal = methods.getStatusText(remaining);                
+                var newVal = methods.getStatusText(remaining);     
+                var statusArea = $(el).nextAll('.remcharsCount:first');
 
                 if( remaining < 0 ) {
-                    $(el).nextAll('.remcharsCount:first').addClass('error');
+                    statusArea.addClass('error');
                 }
 
-                $(el).nextAll('.remcharsCount:first').html(newVal);
+                if( remaining >= 0 && statusArea.hasClass('error')) {
+                    statusArea.removeClass('error');
+                }
+
+                statusArea.html(newVal);
             },
             limitInput: function(el) {
                 $(el).attr('maxlength', $(el).data('maxlen'));
