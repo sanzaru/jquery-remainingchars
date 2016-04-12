@@ -8,7 +8,7 @@ jQuery plugin to add remaining characters text to textbox and input elements.
 2. Build with: grunt
 
 ### Demo
-http://htmlpreview.github.io/?https://raw.githubusercontent.com/sanzaru/jquery-remainingchars/master/demo/example.htm
+<a href="http://htmlpreview.github.io/?https://raw.githubusercontent.com/sanzaru/jquery-remainingchars/master/demo/example.htm" target="_blank">http://htmlpreview.github.io/?https://raw.githubusercontent.com/sanzaru/jquery-remainingchars/master/demo/example.htm</a>
 
 ### Usage
 
