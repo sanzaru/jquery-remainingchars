@@ -63,11 +63,11 @@ The plugin will add a div container after the inputs/textareas with the class na
 style the output declare some rules for this class in your CSS.
 
 ### Options
-* statustext: The text to show in the status area {optional} If no text is passed the default message is taken.  
-**IMPORTANT:** The statustext string must include a *%d* for being replaced with the count of remaining characters (e.g. "Remaining: %d").
+| Name | Description | 
+| --- | --- | 
+| statustext | The text to show in the status area {optional} If no text is passed the default message is taken.<br><br> **IMPORTANT:** The statustext string must include a *%d* for being replaced with the count of remaining characters (e.g. "Remaining: %d").|
+| limitinput | If set to true, the input field will take only as much characters as in data-maxlen defined (e.g. data-maxlen="120" will result in 120 possible characters).<br><br>**NOTE:** This attribute can also be set via data-limitinput="true" HTML attribute, so set it individually for an element. |
 
-* limitinput: If set to true, the input field will take only as much characters as in data-maxlen defined (e.g. data-maxlen="120" will result in 120 possible characters).  
-**NOTE:** This attribute can also be set via data-limitinput="true" HTML attribute, so set it individually for an element.
 
 ### Changelog
 
